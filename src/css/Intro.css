@@ -1,0 +1,66 @@
+/* section : intro */
+.movie {
+  position: relative;
+}
+.movie .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+.movie .content .left {
+  width: 328px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.movie .content .left .poster {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.movie .content .left .info {
+  display: flex;
+  justify-content: space-between;
+  height: 46px;
+}
+.movie .content .left .info span {
+  display: block;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+}
+.movie .content .left .info a {
+  border-radius: 30px;
+  width: 190px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1;
+  background: linear-gradient(90deg, #ff7356, #fb4357);
+}
+.movie .content .right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.movie .content .right h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #f1f1f1;
+  margin: 0;
+}
+.movie .content .right p {
+  margin: 0;
+  font-size: 36px;
+  color: #f1f1f1;
+}
+.movie .content .right p span {
+  color: var(--primary);
+}
