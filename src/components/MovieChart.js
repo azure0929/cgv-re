@@ -122,7 +122,7 @@ function MovieChart() {
                     className="btn"
                     onClick={() =>
                       openModal(
-                        "http://h.vod.cgv.co.kr/vodCGVa/87864/87864_226866_1200_128_960_540.mp4"
+                        "https://h.vod.cgv.co.kr/vodCGVa/87864/87864_226866_1200_128_960_540.mp4"
                       )
                     }
                   >
@@ -150,7 +150,7 @@ function MovieChart() {
                     className="btn"
                     onClick={() =>
                       openModal(
-                        "http://h.vod.cgv.co.kr/vodCGVa/88271/88271_226165_1200_128_960_540.mp4"
+                        "https://h.vod.cgv.co.kr/vodCGVa/88271/88271_226165_1200_128_960_540.mp4"
                       )
                     }
                   >
@@ -178,7 +178,7 @@ function MovieChart() {
                     className="btn"
                     onClick={() =>
                       openModal(
-                        "http://h.vod.cgv.co.kr/vodCGVa/88267/88267_226464_1200_128_960_540.mp4"
+                        "https://h.vod.cgv.co.kr/vodCGVa/88267/88267_226464_1200_128_960_540.mp4"
                       )
                     }
                   >
@@ -206,7 +206,7 @@ function MovieChart() {
                     className="btn"
                     onClick={() =>
                       openModal(
-                        "http://h.vod.cgv.co.kr/vodCGVa/88335/88335_226292_1200_128_960_540.mp4"
+                        "https://h.vod.cgv.co.kr/vodCGVa/88335/88335_226292_1200_128_960_540.mp4"
                       )
                     }
                   >
@@ -234,7 +234,7 @@ function MovieChart() {
                     className="btn"
                     onClick={() =>
                       openModal(
-                        "http://h.vod.cgv.co.kr/vodCGVa/88332/88332_226091_1200_128_960_540.mp4"
+                        "https://h.vod.cgv.co.kr/vodCGVa/88332/88332_226091_1200_128_960_540.mp4"
                       )
                     }
                   >
@@ -262,7 +262,7 @@ function MovieChart() {
                     className="btn"
                     onClick={() =>
                       openModal(
-                        "http://h.vod.cgv.co.kr/vodCGVa/88265/88265_225899_1200_128_960_540.mp4"
+                        "https://h.vod.cgv.co.kr/vodCGVa/88265/88265_225899_1200_128_960_540.mp4"
                       )
                     }
                   >
@@ -290,7 +290,7 @@ function MovieChart() {
                     className="btn"
                     onClick={() =>
                       openModal(
-                        "http://h.vod.cgv.co.kr/vodCGVa/87947/87947_223266_1200_128_960_540.mp4"
+                        "https://h.vod.cgv.co.kr/vodCGVa/87947/87947_223266_1200_128_960_540.mp4"
                       )
                     }
                   >
@@ -318,7 +318,7 @@ function MovieChart() {
                     className="btn"
                     onClick={() =>
                       openModal(
-                        "http://h.vod.cgv.co.kr/vodCGVa/88280/88280_226186_1200_128_960_540.mp4"
+                        "https://h.vod.cgv.co.kr/vodCGVa/88280/88280_226186_1200_128_960_540.mp4"
                       )
                     }
                   >
