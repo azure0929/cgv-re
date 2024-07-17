@@ -1,24 +1,21 @@
-import Header from "@/components/Header.js";
-import Intro from "@/components/Intro.js";
-import MovieChart from "@/components/MovieChart.js";
-import Upcoming from "@/components/Upcoming.js";
-import Theater from "@/components/Theater.js";
-import Store from "@/components/Store.js";
-import Event from "@/components/Event.js";
-import Footer from "@/components/Footer.js";
+import { Routes, Route } from "react-router-dom";
+import Main from "@/routes/Main.js";
+import Making from "@/routes/Making.js";
+import Footer from "@/common/Footer.js";
+import ScrollToTop from "./components/ScrollToTop";
 import "@/App.css";
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <Intro />
-      <MovieChart />
-      <Upcoming />
-      <Theater />
-      <Event />
-      <Store />
-      <Footer />
+    <div>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/making" element={<Making />} />
+        </Routes>
+        <ScrollToTop />
+        <Footer />
+      </div>
     </div>
   );
 }

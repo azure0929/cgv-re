@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Navigation } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
 import play from "@/assets/play.png";
 import movieHead01 from "@/assets/movieHead01.jpg";
 import movieHead02 from "@/assets/movieHead02.jpg";
@@ -35,6 +36,13 @@ function Intro() {
     setVideoSource("");
     setShowModal(false);
   }, []);
+
+  // Navigate
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
 
   return (
     <div>
@@ -71,7 +79,9 @@ function Intro() {
                     </div>
                     <div className="info">
                       <span>2024.07.12</span>
-                      <a href="#none">예매</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매
+                      </button>
                     </div>
                   </div>
                   <div className="right">
@@ -103,7 +113,9 @@ function Intro() {
                     </div>
                     <div className="info">
                       <span>2024.07.03</span>
-                      <a href="#none">예매</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매
+                      </button>
                     </div>
                   </div>
                   <div className="right">
@@ -135,7 +147,9 @@ function Intro() {
                     </div>
                     <div className="info">
                       <span>2024.06.12</span>
-                      <a href="#none">예매</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매
+                      </button>
                     </div>
                   </div>
                   <div className="right">
@@ -167,7 +181,9 @@ function Intro() {
                     </div>
                     <div className="info">
                       <span>2024.06.26</span>
-                      <a href="#none">예매</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매
+                      </button>
                     </div>
                   </div>
                   <div className="right">
@@ -199,7 +215,9 @@ function Intro() {
                     </div>
                     <div className="info">
                       <span>2024.06.26</span>
-                      <a href="#none">예매</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매
+                      </button>
                     </div>
                   </div>
                   <div className="right">

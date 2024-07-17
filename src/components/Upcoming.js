@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import upcoming01 from "@/assets/upcoming01.jpg";
 import upcoming02 from "@/assets/upcoming02.jpg";
 import upcoming03 from "@/assets/upcoming03.jpg";
@@ -32,6 +33,13 @@ function Upcoming() {
     setShowModal(false);
   }, []);
 
+  // Navigate
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <div>
       {/* section :  */}
@@ -56,7 +64,7 @@ function Upcoming() {
             <div className="left">
               <h2>상영예정작</h2>
             </div>
-            <div className="right">
+            <div className="right" onClick={() => handleNavigation("/making")}>
               전체보기
               <div href="#none" className="icon">
                 <FontAwesomeIcon icon={faAngleRight} />
@@ -79,7 +87,9 @@ function Upcoming() {
                     <img className="play" src={play} alt="play" />
                   </div>
                   <div className="link">
-                    <a href="#none">상세보기</a>
+                    <button onClick={() => handleNavigation("/making")}>
+                      상세보기
+                    </button>
                   </div>
                 </div>
               </div>
@@ -121,8 +131,12 @@ function Upcoming() {
                   </div>
                 </div>
                 <div className="link">
-                  <a href="#none">예매</a>
-                  <a href="#none">무대인사</a>
+                  <button onClick={() => handleNavigation("/making")}>
+                    예매
+                  </button>
+                  <button onClick={() => handleNavigation("/making")}>
+                    무대인사
+                  </button>
                 </div>
               </div>
             </div>
@@ -143,7 +157,9 @@ function Upcoming() {
                         <img className="play" src={play} alt="play" />
                       </div>
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -167,7 +183,9 @@ function Upcoming() {
                         <img className="play" src={play} alt="play" />
                       </div>
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -190,7 +208,9 @@ function Upcoming() {
                         <img className="play" src={play} alt="play" />
                       </div>
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -211,7 +231,9 @@ function Upcoming() {
                         <img className="play" src={play} alt="play" />
                       </div>
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -234,7 +256,9 @@ function Upcoming() {
                         <img className="play" src={play} alt="play" />
                       </div>
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -255,7 +279,9 @@ function Upcoming() {
                         <img className="play" src={play} alt="play" />
                       </div>
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -268,7 +294,9 @@ function Upcoming() {
                     <img src={upcoming08} alt="에이리언- 로물루스" />
                     <div className="eff">
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -289,7 +317,9 @@ function Upcoming() {
                         <img className="play" src={play} alt="play" />
                       </div>
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -302,7 +332,9 @@ function Upcoming() {
                     <img src={upcoming10} alt="모아나 2" />
                     <div className="eff">
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -313,7 +345,9 @@ function Upcoming() {
                     <img src={upcoming11} alt="애니멀 킹덤" />
                     <div className="eff">
                       <div className="link">
-                        <a href="#none">상세보기</a>
+                        <button onClick={() => handleNavigation("/making")}>
+                          상세보기
+                        </button>
                       </div>
                     </div>
                   </div>

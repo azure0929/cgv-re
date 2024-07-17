@@ -75,7 +75,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.upcoming .inner .movie .left .poster .link a {
+.upcoming .inner .movie .left .poster .link button {
   border: 1px solid #f1f1f1;
   border-radius: 30px;
   display: flex;
@@ -150,7 +150,7 @@
   justify-content: center;
   margin-top: 20px;
 }
-.upcoming .inner .movie .left .detail .link a {
+.upcoming .inner .movie .left .detail .link button {
   border-radius: 30px;
   width: 170px;
   height: 48px;
@@ -159,15 +159,15 @@
   align-items: center;
   color: #f1f1f1;
 }
-.upcoming .inner .movie .left .detail .link a:first-child {
+.upcoming .inner .movie .left .detail .link button:first-child {
   background: linear-gradient(90deg, #ff7356, #fb4357);
 }
-.upcoming .inner .movie .left .detail .link a:last-child {
+.upcoming .inner .movie .left .detail .link button:last-child {
   border: 1px solid #fb4357;
   color: var(--primary);
   transition: 0.3s;
 }
-.upcoming .inner .movie .left .detail .link a:last-child:hover {
+.upcoming .inner .movie .left .detail .link button:last-child:hover {
   color: #f1f1f1;
   background: linear-gradient(90deg, #ff7356, #fb4357);
 }
@@ -228,7 +228,7 @@
   width: 100px;
   height: 32px;
 }
-.upcoming .inner .movie .right ul li div .eff .link a {
+.upcoming .inner .movie .right ul li div .eff .link button {
   border: 1px solid #f1f1f1;
   border-radius: 30px;
   display: flex;

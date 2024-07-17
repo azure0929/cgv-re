@@ -52,9 +52,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.moviechart .content .inner .btn button {
-  background-color: transparent;
-}
 .moviechart .content .inner .prevbtn {
   left: -124px;
 }
@@ -105,19 +102,20 @@
   flex-direction: column;
   align-items: center;
 }
-.moviechart .content .inner .detail .info .link a {
+.moviechart .content .inner .detail .info .link button {
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 120px;
   height: 38px;
+  background-color: transparent;
 }
-.moviechart .content .inner .detail .info .link a:first-child {
+.moviechart .content .inner .detail .info .link button:first-child {
   border: 1px solid #f1f1f1;
   color: #f1f1f1;
 }
-.moviechart .content .inner .detail .info .link a:last-child {
+.moviechart .content .inner .detail .info .link button:last-child {
   color: #f1f1f1;
   background: linear-gradient(90deg, #ff7356, #fb4357);
 }

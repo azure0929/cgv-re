@@ -1,18 +1,26 @@
+import { useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import search from "@/assets/search.png";
 import "@/css/Header.css";
+import "@/App.css";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <div>
-      <header>
+      <header className="dark">
         <div className="inner">
           <div className="content">
             <div className="top">
               <div className="logo">
-                <a href="/">
+                <div href="/">
                   <img src={logo} alt="로고" />
-                </a>
+                </div>
                 <div>CULTUREPLEX</div>
               </div>
               <div className="user">
@@ -23,22 +31,34 @@ function Header() {
             <nav className="bottom">
               <ul>
                 <li>
-                  <a href="#none">영화</a>
+                  <button onClick={() => handleNavigation("/making")}>
+                    영화
+                  </button>
                 </li>
                 <li>
-                  <a href="#none">예매</a>
+                  <button onClick={() => handleNavigation("/making")}>
+                    예매
+                  </button>
                 </li>
                 <li>
-                  <a href="#none">극장</a>
+                  <button onClick={() => handleNavigation("/making")}>
+                    극장
+                  </button>
                 </li>
                 <li>
-                  <a href="#none">스토어</a>
+                  <button onClick={() => handleNavigation("/making")}>
+                    스토어
+                  </button>
                 </li>
                 <li>
-                  <a href="#none">이벤트</a>
+                  <button onClick={() => handleNavigation("/making")}>
+                    이벤트
+                  </button>
                 </li>
                 <li>
-                  <a href="#none">혜택</a>
+                  <button onClick={() => handleNavigation("/making")}>
+                    혜택
+                  </button>
                 </li>
                 <li>
                   <img src={search} alt="검색" />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "@/App.css";
@@ -59,6 +60,13 @@ function Event() {
     ],
   ];
 
+  // Navigate
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <div>
       <section className="event">
@@ -67,7 +75,7 @@ function Event() {
             <div className="left">
               <h2>EVENT</h2>
             </div>
-            <div className="right">
+            <div className="right" onClick={() => handleNavigation("/making")}>
               전체보기
               <div href="#none" className="icon">
                 <FontAwesomeIcon icon={faAngleRight} />
@@ -114,9 +122,9 @@ function Event() {
                 {tabBackgrounds[activeTab].map((bg, index) => (
                   <li key={index} className={`background-${bg}`}>
                     <div>
-                      <a className="link" href="#none">
+                      <button onClick={() => handleNavigation("/making")}>
                         상세보기
-                      </a>
+                      </button>
                     </div>
                   </li>
                 ))}

@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -47,6 +48,13 @@ function MovieChart() {
     setShowModal(false);
   }, []);
 
+  // Navigate
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <div>
       <section className="moviechart">
@@ -81,9 +89,9 @@ function MovieChart() {
                 기준
               </span>
             </div>
-            <div className="right">
+            <div className="right" onClick={() => handleNavigation("/making")}>
               전체보기
-              <div href="#none" className="icon">
+              <div className="icon">
                 <FontAwesomeIcon icon={faAngleRight} />
               </div>
             </div>
@@ -106,9 +114,9 @@ function MovieChart() {
               }}
             >
               <SwiperSlide>
-                <a href="#none">
+                <div>
                   <img src={chart01} alt="chart01" />
-                </a>
+                </div>
                 <div className="detail">
                   <div
                     className="btn"
@@ -123,8 +131,12 @@ function MovieChart() {
                   <div className="info">
                     <span>2024.06.12</span>
                     <div className="link">
-                      <a href="#none">상세보기</a>
-                      <a href="#none">예매하기</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        상세보기
+                      </button>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매하기
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -147,8 +159,12 @@ function MovieChart() {
                   <div className="info">
                     <span>2024.06.21</span>
                     <div className="link">
-                      <a href="#none">상세보기</a>
-                      <a href="#none">예매하기</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        상세보기
+                      </button>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매하기
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -171,8 +187,12 @@ function MovieChart() {
                   <div className="info">
                     <span>2024.07.03</span>
                     <div className="link">
-                      <a href="#none">상세보기</a>
-                      <a href="#none">예매하기</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        상세보기
+                      </button>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매하기
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -195,8 +215,12 @@ function MovieChart() {
                   <div className="info">
                     <span>2024.06.26</span>
                     <div className="link">
-                      <a href="#none">상세보기</a>
-                      <a href="#none">예매하기</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        상세보기
+                      </button>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매하기
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -219,8 +243,12 @@ function MovieChart() {
                   <div className="info">
                     <span>2024.06.14</span>
                     <div className="link">
-                      <a href="#none">상세보기</a>
-                      <a href="#none">예매하기</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        상세보기
+                      </button>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매하기
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -243,8 +271,12 @@ function MovieChart() {
                   <div className="info">
                     <span>2024.06.12</span>
                     <div className="link">
-                      <a href="#none">상세보기</a>
-                      <a href="#none">예매하기</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        상세보기
+                      </button>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매하기
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -267,8 +299,12 @@ function MovieChart() {
                   <div className="info">
                     <span>2024.07.06 (재개봉)</span>
                     <div className="link">
-                      <a href="#none">상세보기</a>
-                      <a href="#none">예매하기</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        상세보기
+                      </button>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매하기
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -291,8 +327,12 @@ function MovieChart() {
                   <div className="info">
                     <span>2024.06.19</span>
                     <div className="link">
-                      <a href="#none">상세보기</a>
-                      <a href="#none">예매하기</a>
+                      <button onClick={() => handleNavigation("/making")}>
+                        상세보기
+                      </button>
+                      <button onClick={() => handleNavigation("/making")}>
+                        예매하기
+                      </button>
                     </div>
                   </div>
                 </div>
