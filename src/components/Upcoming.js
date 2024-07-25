@@ -1,5 +1,7 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import upcoming01 from "@/assets/upcoming01.jpg";
 import upcoming02 from "@/assets/upcoming02.jpg";
 import upcoming03 from "@/assets/upcoming03.jpg";
@@ -40,6 +42,11 @@ function Upcoming() {
     navigate(path);
   };
 
+  // AOS
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <div>
       {/* section :  */}
@@ -60,7 +67,7 @@ function Upcoming() {
           </div>
         )}
         <div className="inner">
-          <div className="title">
+          <div className="title" data-aos="fade-up" data-aos-duration="800">
             <div className="left">
               <h2>상영예정작</h2>
             </div>
@@ -72,7 +79,7 @@ function Upcoming() {
             </div>
           </div>
           <div className="movie">
-            <div className="left">
+            <div className="left" data-aos="fade-up" data-aos-duration="900">
               <div className="poster">
                 <img src={upcoming01} alt="탈주" />
                 <div className="eff">
@@ -93,7 +100,11 @@ function Upcoming() {
                   </div>
                 </div>
               </div>
-              <div className="detail">
+              <div
+                className="detail"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
                 <div className="title">
                   <h4>탈주</h4>
                   <span>24.07.03</span>
@@ -140,7 +151,7 @@ function Upcoming() {
                 </div>
               </div>
             </div>
-            <div className="right">
+            <div className="right" data-aos="fade-up" data-aos-duration="1100">
               <ul>
                 <li>
                   <div>

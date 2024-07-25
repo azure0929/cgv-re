@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "@/App.css";
 import "@/css/Event.css";
 
@@ -67,15 +69,25 @@ function Event() {
     navigate(path);
   };
 
+  // AOS
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <div>
       <section className="event">
         <div className="inner">
           <div className="title">
-            <div className="left">
+            <div className="left" data-aos="fade-up" data-aos-duration="800">
               <h2>EVENT</h2>
             </div>
-            <div className="right" onClick={() => handleNavigation("/making")}>
+            <div
+              className="right"
+              onClick={() => handleNavigation("/making")}
+              data-aos="fade-up"
+              data-aos-duration="900"
+            >
               전체보기
               <div href="#none" className="icon">
                 <FontAwesomeIcon icon={faAngleRight} />
@@ -83,7 +95,11 @@ function Event() {
             </div>
           </div>
           <div className="contents">
-            <div className="tabmenu">
+            <div
+              className="tabmenu"
+              data-aos="fade-up"
+              data-aos-duration="1100"
+            >
               <ul>
                 <li
                   className={activeTab === 0 ? "active" : ""}
@@ -117,7 +133,7 @@ function Event() {
                 </li>
               </ul>
             </div>
-            <div className="lists">
+            <div className="lists" data-aos="fade-up" data-aos-duration="1500">
               <ul>
                 {tabBackgrounds[activeTab].map((bg, index) => (
                   <li key={index} className={`background-${bg}`}>

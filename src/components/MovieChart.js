@@ -7,6 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import SlidePrevButton from "@/common/SlidePrevButton.js";
 import SlideNextButton from "@/common/SlideNextButton.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import chart01 from "@/assets/chart01.jpg";
 import chart02 from "@/assets/chart02.jpg";
 import chart03 from "@/assets/chart03.jpg";
@@ -55,6 +57,11 @@ function MovieChart() {
     navigate(path);
   };
 
+  // AOS
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <div>
       <section className="moviechart">
@@ -75,7 +82,7 @@ function MovieChart() {
         )}
         <div className="title">
           <div className="inner">
-            <div className="left">
+            <div className="left" data-aos="fade-up" data-aos-duration="800">
               <h2>무비차트</h2>
               <span>
                 {currentTime.getFullYear()}.
@@ -89,7 +96,12 @@ function MovieChart() {
                 기준
               </span>
             </div>
-            <div className="right" onClick={() => handleNavigation("/making")}>
+            <div
+              className="right"
+              onClick={() => handleNavigation("/making")}
+              data-aos="fade-up"
+              data-aos-duration="900"
+            >
               전체보기
               <div className="icon">
                 <FontAwesomeIcon icon={faAngleRight} />
@@ -114,7 +126,7 @@ function MovieChart() {
               }}
             >
               <SwiperSlide>
-                <div>
+                <div data-aos="fade-up" data-aos-duration="1000">
                   <img src={chart01} alt="chart01" />
                 </div>
                 <div className="detail">
@@ -142,9 +154,9 @@ function MovieChart() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <a href="#none">
+                <div data-aos="fade-up" data-aos-duration="1000">
                   <img src={chart02} alt="chart02" />
-                </a>
+                </div>
                 <div className="detail">
                   <div
                     className="btn"
@@ -170,9 +182,9 @@ function MovieChart() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <a href="#none">
+                <div data-aos="fade-up" data-aos-duration="1000">
                   <img src={chart03} alt="chart03" />
-                </a>
+                </div>
                 <div className="detail">
                   <div
                     className="btn"
@@ -198,9 +210,9 @@ function MovieChart() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <a href="#none">
+                <div data-aos="fade-up" data-aos-duration="1000">
                   <img src={chart04} alt="chart04" />
-                </a>
+                </div>
                 <div className="detail">
                   <div
                     className="btn"
@@ -226,9 +238,9 @@ function MovieChart() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <a href="#none">
+                <div data-aos="fade-up" data-aos-duration="1000">
                   <img src={chart05} alt="chart05" />
-                </a>
+                </div>
                 <div className="detail">
                   <div
                     className="btn"
@@ -254,9 +266,9 @@ function MovieChart() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <a href="#none">
+                <div data-aos="fade-up" data-aos-duration="1000">
                   <img src={chart06} alt="chart06" />
-                </a>
+                </div>
                 <div className="detail">
                   <div
                     className="btn"
@@ -282,9 +294,9 @@ function MovieChart() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <a href="#none">
+                <div data-aos="fade-up" data-aos-duration="1000">
                   <img src={chart07} alt="chart07" />
-                </a>
+                </div>
                 <div className="detail">
                   <div
                     className="btn"
@@ -310,9 +322,9 @@ function MovieChart() {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <a href="#none">
+                <div data-aos="fade-up" data-aos-duration="1000">
                   <img src={chart08} alt="chart08" />
-                </a>
+                </div>
                 <div className="detail">
                   <div
                     className="btn"

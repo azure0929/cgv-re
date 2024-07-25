@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import pakage01 from "@/assets/pakage01.jpg";
 import pakage02 from "@/assets/pakage02.jpg";
 import pakage03 from "@/assets/pakage03.jpg";
@@ -16,6 +18,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "@/App.css";
 import "@/css/Store.css";
+import { useEffect } from "react";
 
 function Store() {
   // Navigate
@@ -25,13 +28,22 @@ function Store() {
     navigate(path);
   };
 
+  // AOS
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <div>
       <section className="store">
         <div className="inner">
           <div className="contents">
             <div className="top">
-              <div className="notice">
+              <div
+                className="notice"
+                data-aos="fade-up"
+                data-aos-duration="800"
+              >
                 <span>공지사항</span>
                 <button onClick={() => handleNavigation("/making")}>
                   [행사/이벤트][CGV]&lt;선재 업고 튀어&gt; 최종화 단체 관람
@@ -41,6 +53,8 @@ function Store() {
               <div
                 className="right"
                 onClick={() => handleNavigation("/making")}
+                data-aos="fade-up"
+                data-aos-duration="900"
               >
                 더 보기
                 <div className="icon">
