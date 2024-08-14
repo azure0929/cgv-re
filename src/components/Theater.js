@@ -1,14 +1,14 @@
-import theater01 from "@/assets/theater01.jpg";
-import theater02 from "@/assets/theater02.jpg";
-import theater03 from "@/assets/theater03.jpg";
-import theater04 from "@/assets/theater04.jpg";
-import theater05 from "@/assets/theater05.jpg";
-import theater06 from "@/assets/theater06.jpg";
-import theater07 from "@/assets/theater07.jpg";
-import theater08 from "@/assets/theater08.jpg";
-import theater09 from "@/assets/theater09.jpg";
-import theater10 from "@/assets/theater10.jpg";
-import theater11 from "@/assets/theater11.jpg";
+import theater01 from "@/assets/theater01.webp";
+import theater02 from "@/assets/theater02.webp";
+import theater03 from "@/assets/theater03.webp";
+import theater04 from "@/assets/theater04.webp";
+import theater05 from "@/assets/theater05.webp";
+import theater06 from "@/assets/theater06.webp";
+import theater07 from "@/assets/theater07.webp";
+import theater08 from "@/assets/theater08.webp";
+import theater09 from "@/assets/theater09.webp";
+import theater10 from "@/assets/theater10.webp";
+import theater11 from "@/assets/theater11.webp";
 import "@/App.css";
 import "@/css/Theater.css";
 
