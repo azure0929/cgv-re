@@ -36,7 +36,21 @@ Environment
 <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/></a>
 </p>
-<br>
+<br><br>
+
+### 웹 성능 최적화 (Lighthouse 사용)
+
+**1️⃣ 이미지 포맷을 jpg에서 webp로 변환**
+
+- 성능 : 64 → 71
+
+  <details>
+    <summary>최대 텍스트 또는 이미지가 표시되는 시간 : 2.1초 → 0.8초</summary>
+    <img src="https://github.com/user-attachments/assets/397986c7-9759-4153-980c-b8d6e8abdce7" alt="">
+    <img src="https://github.com/user-attachments/assets/5ee614ce-81f2-4847-9cf7-a4a9c50c1c8c" alt="">
+  </details>
+
+<br><br>
 
 ### 전체 페이지
 
