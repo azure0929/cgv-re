@@ -139,3 +139,158 @@ const handleCloseModal = useCallback(() => {
   <img className="play" src={play} alt="play" />
 </div>
 ```
+
+<br>
+
+---
+
+<br>
+
+- Flex & animation
+
+```html
+{/* section : theater */}
+<section className="theater">
+  <div className="inner">
+    <div className="list">
+      <div className="list-group">
+        <img src="{theater01}" alt="theater01" />
+        <img src="{theater02}" alt="theater02" />
+        <img src="{theater03}" alt="theater03" />
+        <img src="{theater04}" alt="theater04" />
+        <img src="{theater05}" alt="theater05" />
+      </div>
+      <div aria-hidden="true" className="list-group">
+        <img src="{theater01}" alt="theater01" />
+        <img src="{theater02}" alt="theater02" />
+        <img src="{theater03}" alt="theater03" />
+        <img src="{theater04}" alt="theater04" />
+        <img src="{theater05}" alt="theater05" />
+      </div>
+    </div>
+    <div className="list list-reverse">
+      <div className="list-group">
+        <img src="{theater06}" alt="theater06" />
+        <img src="{theater07}" alt="theater07" />
+        <img src="{theater08}" alt="theater08" />
+        <img src="{theater09}" alt="theater09" />
+        <img src="{theater10}" alt="theater10" />
+        <img src="{theater11}" alt="theater11" />
+      </div>
+      <div aria-hidden="true" className="list-group">
+        <img src="{theater06}" alt="theater06" />
+        <img src="{theater07}" alt="theater07" />
+        <img src="{theater08}" alt="theater08" />
+        <img src="{theater09}" alt="theater09" />
+        <img src="{theater10}" alt="theater10" />
+        <img src="{theater11}" alt="theater11" />
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+```css
+.theater {
+  margin-top: 126px;
+  overflow: hidden;
+}
+.theater .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: auto;
+}
+.theater img {
+  width: 382px;
+  height: 212px;
+  border-radius: 12px;
+}
+.theater .inner .list {
+  display: flex;
+  user-select: none;
+  gap: 16px;
+}
+.theater .inner .list .list-group {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  animation: scroll-x var(--duration) linear infinite;
+}
+.theater .inner .list-reverse .list-group {
+  animation-direction: reverse;
+  animation-delay: -3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .list {
+    animation-play-state: paused;
+  }
+}
+@keyframes scroll-x {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}
+```
+
+<br>
+
+---
+
+<br>
+
+- tabBackgrounds 배열에서 현재 활성화된 탭('activeTab')의 배경 목록 표시
+
+```javascript
+<div className="lists" data-aos="fade-up" data-aos-duration="1500">
+  <ul>
+    {tabBackgrounds[activeTab].map((bg, index) => (
+      <li key={index} className={`background-${bg}`}>
+        <div>
+          <button onClick={() => handleNavigation("/making")}>상세보기</button>
+        </div>
+      </li>
+    ))}
+  </ul>
+</div>
+```
+
+<br>
+
+- Flex를 활용하여 동적 리스트 항목 크기 조절 및 애니메이션 효과 구현
+
+```css
+.event .inner .contents .lists ul li {
+  border-radius: 12px;
+  position: relative;
+  width: calc(1200px / 7);
+  height: 530px;
+  flex: 1;
+  filter: grayscale(1);
+  transition: 0.35s;
+  transition: 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.event .inner .contents .lists ul li:hover {
+  flex: 5;
+  filter: grayscale(0);
+}
+.event .inner .contents .lists ul li:hover div {
+  opacity: 1;
+  transition: 0.3s;
+}
+.event .inner .contents .lists ul li div {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+```
