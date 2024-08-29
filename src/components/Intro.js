@@ -1,18 +1,9 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Navigation } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
 import play from "@/assets/play.png";
-import movieHead01 from "@/assets/movieHead01.webp";
-import movieHead02 from "@/assets/movieHead02.webp";
-import movieHead03 from "@/assets/movieHead03.webp";
-import movieHead04 from "@/assets/movieHead04.webp";
-import movieHead05 from "@/assets/movieHead05.webp";
-import introPoster01 from "@/assets/introPoster01.webp";
-import introPoster02 from "@/assets/introPoster02.webp";
-import introPoster03 from "@/assets/introPoster03.webp";
-import introPoster04 from "@/assets/introPoster04.webp";
-import introPoster05 from "@/assets/introPoster05.webp";
+import { movieData } from "@/data/MovieData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import "@/App.css";
@@ -44,6 +35,41 @@ function Intro() {
     navigate(path);
   };
 
+  const swiperSlides = useMemo(
+    () =>
+      movieData.map((movie) => (
+        <SwiperSlide key={movie.title}>
+          <div className="movie">
+            <div className="content">
+              <div className="left">
+                <div className="poster">
+                  <img src={movie.poster} alt="poster" loading="lazy" />
+                </div>
+                <div className="info">
+                  <span>{movie.date}</span>
+                  <button onClick={() => handleNavigation("/making")}>
+                    예매
+                  </button>
+                </div>
+              </div>
+              <div className="right">
+                <h2>{movie.title}</h2>
+                <p>
+                  <span>{movie.description.split(" ")[0]}</span>{" "}
+                  <span>{movie.description.split(" ")[1]}</span>
+                </p>
+              </div>
+            </div>
+            <img src={movie.head} alt={movie.title} loading="lazy" />
+          </div>
+          <div className="btn" onClick={() => openModal(movie.videoUrl)}>
+            <img className="play" src={play} alt="play" loading="lazy" />
+          </div>
+        </SwiperSlide>
+      )),
+    [openModal, handleNavigation]
+  );
+
   return (
     <div>
       <section className="intro">
@@ -70,176 +96,7 @@ function Intro() {
             autoplay={{ delay: 6000 }}
             effect={"fade"}
           >
-            <SwiperSlide>
-              <div className="movie">
-                <div className="content">
-                  <div className="left">
-                    <div className="poster">
-                      <img src={introPoster01} alt="poster" />
-                    </div>
-                    <div className="info">
-                      <span>2024.07.12</span>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매
-                      </button>
-                    </div>
-                  </div>
-                  <div className="right">
-                    <h2>탈출-프로젝트 사일런스</h2>
-                    <p>
-                      <span>생존자 전원</span>이 <span>타겟</span>
-                    </p>
-                  </div>
-                </div>
-                <img src={movieHead01} alt="탈출-프로젝트 사일런스" />
-              </div>
-              <div
-                className="btn"
-                onClick={() =>
-                  openModal(
-                    "https://h.vod.cgv.co.kr/vodCGVa/88384/88384_226770_1200_128_960_540.mp4"
-                  )
-                }
-              >
-                <img className="play" src={play} alt="play" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="movie">
-                <div className="content">
-                  <div className="left">
-                    <div className="poster">
-                      <img src={introPoster02} alt="poster" />
-                    </div>
-                    <div className="info">
-                      <span>2024.07.03</span>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매
-                      </button>
-                    </div>
-                  </div>
-                  <div className="right">
-                    <h2>탈주</h2>
-                    <p>
-                      <span>내 앞 길</span> <span>내가</span> 정한다
-                    </p>
-                  </div>
-                </div>
-                <img src={movieHead02} alt="탈주" />
-              </div>
-              <div
-                className="btn"
-                onClick={() =>
-                  openModal(
-                    "https://h.vod.cgv.co.kr/vodCGVa/88267/88267_226221_1200_128_960_540.mp4"
-                  )
-                }
-              >
-                <img className="play" src={play} alt="play" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="movie">
-                <div className="content">
-                  <div className="left">
-                    <div className="poster">
-                      <img src={introPoster03} alt="poster" />
-                    </div>
-                    <div className="info">
-                      <span>2024.06.12</span>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매
-                      </button>
-                    </div>
-                  </div>
-                  <div className="right">
-                    <h2>인사이드 아웃2</h2>
-                    <p>
-                      <span>낯선 감정</span>이 <span>본부에 등장</span>
-                    </p>
-                  </div>
-                </div>
-                <img src={movieHead03} alt="인사이드 아웃2" />
-              </div>
-              <div
-                className="btn"
-                onClick={() =>
-                  openModal(
-                    "https://h.vod.cgv.co.kr/vodCGVa/87864/87864_226866_1200_128_960_540.mp4"
-                  )
-                }
-              >
-                <img className="play" src={play} alt="play" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="movie">
-                <div className="content">
-                  <div className="left">
-                    <div className="poster">
-                      <img src={introPoster04} alt="poster" />
-                    </div>
-                    <div className="info">
-                      <span>2024.06.26</span>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매
-                      </button>
-                    </div>
-                  </div>
-                  <div className="right">
-                    <h2>콰이어트 플레이스-첫째 날</h2>
-                    <p>
-                      <span>쉿,</span> <span>괴생명체</span>등장
-                    </p>
-                  </div>
-                </div>
-                <img src={movieHead04} alt="콰이어트 플레이스-첫째 날" />
-              </div>
-              <div
-                className="btn"
-                onClick={() =>
-                  openModal(
-                    "https://h.vod.cgv.co.kr/vodCGVa/88335/88335_226292_1200_128_960_540.mp4"
-                  )
-                }
-              >
-                <img className="play" src={play} alt="play" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="movie">
-                <div className="content">
-                  <div className="left">
-                    <div className="poster">
-                      <img src={introPoster05} alt="poster" />
-                    </div>
-                    <div className="info">
-                      <span>2024.06.26</span>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매
-                      </button>
-                    </div>
-                  </div>
-                  <div className="right">
-                    <h2>핸섬가이즈</h2>
-                    <p>
-                      오히려 <span>남치범</span>으로 오해를?
-                    </p>
-                  </div>
-                </div>
-                <img src={movieHead05} alt="핸섬가이즈" />
-              </div>
-              <div
-                className="btn"
-                onClick={() =>
-                  openModal(
-                    "https://h.vod.cgv.co.kr/vodCGVa/88227/88227_226482_1200_128_960_540.mp4"
-                  )
-                }
-              >
-                <img className="play" src={play} alt="play" />
-              </div>
-            </SwiperSlide>
+            {swiperSlides}
           </Swiper>
         </div>
       </section>
