@@ -58,7 +58,7 @@ function MovieChart() {
     chartData.map((item) => (
       <SwiperSlide key={item.id}>
         <div data-aos="fade-up" data-aos-duration="1000">
-          <img src={item.image} alt={`chart${item.id}`} />
+          <img src={item.image} alt={item.title} />
         </div>
         <div className="detail">
           <div className="btn" onClick={() => openModal(item.videoSrc)}>
