@@ -1,22 +1,14 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import SlidePrevButton from "@/common/SlidePrevButton.js";
 import SlideNextButton from "@/common/SlideNextButton.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import chart01 from "@/assets/chart01.webp";
-import chart02 from "@/assets/chart02.webp";
-import chart03 from "@/assets/chart03.webp";
-import chart04 from "@/assets/chart04.webp";
-import chart05 from "@/assets/chart05.webp";
-import chart06 from "@/assets/chart06.webp";
-import chart07 from "@/assets/chart07.webp";
-import chart08 from "@/assets/chart08.webp";
+import { chartData } from "@/data/ChartData.js";
 import play from "@/assets/play.png";
 import "@/App.css";
 import "@/css/MovieChart.css";
@@ -60,7 +52,33 @@ function MovieChart() {
   // AOS
   useEffect(() => {
     AOS.init();
-  });
+  }, []);
+
+  const swiperSlides = useMemo(() =>
+    chartData.map((item) => (
+      <SwiperSlide key={item.id}>
+        <div data-aos="fade-up" data-aos-duration="1000">
+          <img src={item.image} alt={`chart${item.id}`} />
+        </div>
+        <div className="detail">
+          <div className="btn" onClick={() => openModal(item.videoSrc)}>
+            <img className="play" src={play} alt="play" />
+          </div>
+          <div className="info">
+            <span>{item.date}</span>
+            <div className="link">
+              <button onClick={() => handleNavigation("/making")}>
+                상세보기
+              </button>
+              <button onClick={() => handleNavigation("/making")}>
+                예매하기
+              </button>
+            </div>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))
+  );
 
   return (
     <div>
@@ -125,230 +143,7 @@ function MovieChart() {
                 prevEl: ".prevbtn",
               }}
             >
-              <SwiperSlide>
-                <div data-aos="fade-up" data-aos-duration="1000">
-                  <img src={chart01} alt="chart01" />
-                </div>
-                <div className="detail">
-                  <div
-                    className="btn"
-                    onClick={() =>
-                      openModal(
-                        "https://h.vod.cgv.co.kr/vodCGVa/87864/87864_226866_1200_128_960_540.mp4"
-                      )
-                    }
-                  >
-                    <img className="play" src={play} alt="play" />
-                  </div>
-                  <div className="info">
-                    <span>2024.06.12</span>
-                    <div className="link">
-                      <button onClick={() => handleNavigation("/making")}>
-                        상세보기
-                      </button>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매하기
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div data-aos="fade-up" data-aos-duration="1000">
-                  <img src={chart02} alt="chart02" />
-                </div>
-                <div className="detail">
-                  <div
-                    className="btn"
-                    onClick={() =>
-                      openModal(
-                        "https://h.vod.cgv.co.kr/vodCGVa/88271/88271_226165_1200_128_960_540.mp4"
-                      )
-                    }
-                  >
-                    <img className="play" src={play} alt="play" />
-                  </div>
-                  <div className="info">
-                    <span>2024.06.21</span>
-                    <div className="link">
-                      <button onClick={() => handleNavigation("/making")}>
-                        상세보기
-                      </button>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매하기
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div data-aos="fade-up" data-aos-duration="1000">
-                  <img src={chart03} alt="chart03" />
-                </div>
-                <div className="detail">
-                  <div
-                    className="btn"
-                    onClick={() =>
-                      openModal(
-                        "https://h.vod.cgv.co.kr/vodCGVa/88267/88267_226464_1200_128_960_540.mp4"
-                      )
-                    }
-                  >
-                    <img className="play" src={play} alt="play" />
-                  </div>
-                  <div className="info">
-                    <span>2024.07.03</span>
-                    <div className="link">
-                      <button onClick={() => handleNavigation("/making")}>
-                        상세보기
-                      </button>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매하기
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div data-aos="fade-up" data-aos-duration="1000">
-                  <img src={chart04} alt="chart04" />
-                </div>
-                <div className="detail">
-                  <div
-                    className="btn"
-                    onClick={() =>
-                      openModal(
-                        "https://h.vod.cgv.co.kr/vodCGVa/88335/88335_226292_1200_128_960_540.mp4"
-                      )
-                    }
-                  >
-                    <img className="play" src={play} alt="play" />
-                  </div>
-                  <div className="info">
-                    <span>2024.06.26</span>
-                    <div className="link">
-                      <button onClick={() => handleNavigation("/making")}>
-                        상세보기
-                      </button>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매하기
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div data-aos="fade-up" data-aos-duration="1000">
-                  <img src={chart05} alt="chart05" />
-                </div>
-                <div className="detail">
-                  <div
-                    className="btn"
-                    onClick={() =>
-                      openModal(
-                        "https://h.vod.cgv.co.kr/vodCGVa/88332/88332_226091_1200_128_960_540.mp4"
-                      )
-                    }
-                  >
-                    <img className="play" src={play} alt="play" />
-                  </div>
-                  <div className="info">
-                    <span>2024.06.14</span>
-                    <div className="link">
-                      <button onClick={() => handleNavigation("/making")}>
-                        상세보기
-                      </button>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매하기
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div data-aos="fade-up" data-aos-duration="1000">
-                  <img src={chart06} alt="chart06" />
-                </div>
-                <div className="detail">
-                  <div
-                    className="btn"
-                    onClick={() =>
-                      openModal(
-                        "https://h.vod.cgv.co.kr/vodCGVa/88265/88265_225899_1200_128_960_540.mp4"
-                      )
-                    }
-                  >
-                    <img className="play" src={play} alt="play" />
-                  </div>
-                  <div className="info">
-                    <span>2024.06.12</span>
-                    <div className="link">
-                      <button onClick={() => handleNavigation("/making")}>
-                        상세보기
-                      </button>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매하기
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div data-aos="fade-up" data-aos-duration="1000">
-                  <img src={chart07} alt="chart07" />
-                </div>
-                <div className="detail">
-                  <div
-                    className="btn"
-                    onClick={() =>
-                      openModal(
-                        "https://h.vod.cgv.co.kr/vodCGVa/87947/87947_223266_1200_128_960_540.mp4"
-                      )
-                    }
-                  >
-                    <img className="play" src={play} alt="play" />
-                  </div>
-                  <div className="info">
-                    <span>2024.07.06 (재개봉)</span>
-                    <div className="link">
-                      <button onClick={() => handleNavigation("/making")}>
-                        상세보기
-                      </button>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매하기
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div data-aos="fade-up" data-aos-duration="1000">
-                  <img src={chart08} alt="chart08" />
-                </div>
-                <div className="detail">
-                  <div
-                    className="btn"
-                    onClick={() =>
-                      openModal(
-                        "https://h.vod.cgv.co.kr/vodCGVa/88280/88280_226186_1200_128_960_540.mp4"
-                      )
-                    }
-                  >
-                    <img className="play" src={play} alt="play" />
-                  </div>
-                  <div className="info">
-                    <span>2024.06.19</span>
-                    <div className="link">
-                      <button onClick={() => handleNavigation("/making")}>
-                        상세보기
-                      </button>
-                      <button onClick={() => handleNavigation("/making")}>
-                        예매하기
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+              {swiperSlides}
             </Swiper>
             <div className="nextbtn btn">
               <SlideNextButton />
