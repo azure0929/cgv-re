@@ -22,7 +22,7 @@ function Footer() {
       <footer>
         <div className="inner">
           <div className="logo">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" loading="lazy" />
           </div>
           <ul className="link">
             <li>
@@ -144,7 +144,7 @@ function Footer() {
               <div className="qr">
                 <span>앱 다운로드</span>
                 <div>
-                  <img src={qr} alt="qrcode" />
+                  <img src={qr} alt="qrcode" loading="lazy" />
                 </div>
                 <p>
                   QR코드를 스캔하고 <br />

@@ -6,7 +6,7 @@ function SlidePrevButton() {
 
   return (
     <button onClick={() => swiper?.slidePrev()}>
-      <img src={prevbtn} alt="prevbtn" />
+      <img src={prevbtn} alt="prevbtn" loading="lazy" />
     </button>
   );
 }

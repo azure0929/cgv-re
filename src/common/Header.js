@@ -19,7 +19,7 @@ function Header() {
             <div className="top">
               <div className="logo">
                 <div href="/">
-                  <img src={logo} alt="로고" />
+                  <img src={logo} alt="로고" loading="lazy" />
                 </div>
                 <div>CULTUREPLEX</div>
               </div>
@@ -61,7 +61,7 @@ function Header() {
                   </button>
                 </li>
                 <li>
-                  <img src={search} alt="검색" />
+                  <img src={search} alt="검색" loading="lazy" />
                 </li>
               </ul>
             </nav>

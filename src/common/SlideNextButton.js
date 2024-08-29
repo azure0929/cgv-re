@@ -6,7 +6,7 @@ function SlideNextButton() {
 
   return (
     <button onClick={() => swiper?.slideNext()}>
-      <img src={nextbtn} alt="nextbtn" />
+      <img src={nextbtn} alt="nextbtn" loading="lazy" />
     </button>
   );
 }
