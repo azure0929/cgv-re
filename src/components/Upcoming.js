@@ -81,7 +81,7 @@ function Upcoming() {
           <div className="movie">
             <div className="left" data-aos="fade-up" data-aos-duration="900">
               <div className="poster">
-                <img src={upcoming01} alt="탈주" />
+                <img src={upcoming01} alt="탈주" loading="lazy" />
                 <div className="eff">
                   <div
                     className="btn"
@@ -91,7 +91,12 @@ function Upcoming() {
                       )
                     }
                   >
-                    <img className="play" src={play} alt="play" />
+                    <img
+                      className="play"
+                      src={play}
+                      alt="play"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="link">
                     <button onClick={() => handleNavigation("/making")}>
@@ -155,7 +160,7 @@ function Upcoming() {
               <ul>
                 <li>
                   <div>
-                    <img src={upcoming02} alt="듄 - 파트2" />
+                    <img src={upcoming02} alt="듄 - 파트2" loading="lazy" />
                     <div className="eff">
                       <div
                         className="btn"
@@ -165,7 +170,12 @@ function Upcoming() {
                           )
                         }
                       >
-                        <img className="play" src={play} alt="play" />
+                        <img
+                          className="play"
+                          src={play}
+                          alt="play"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>
@@ -181,6 +191,7 @@ function Upcoming() {
                     <img
                       src={upcoming03}
                       alt="극장판 도라에몽 - 진구의 지구 교향곡"
+                      loading="lazy"
                     />
                     <div className="eff">
                       <div
@@ -191,7 +202,12 @@ function Upcoming() {
                           )
                         }
                       >
-                        <img className="play" src={play} alt="play" />
+                        <img
+                          className="play"
+                          src={play}
+                          alt="play"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>
@@ -206,7 +222,7 @@ function Upcoming() {
               <ul>
                 <li>
                   <div>
-                    <img src={upcoming04} alt="탈출" />
+                    <img src={upcoming04} alt="탈출" loading="lazy" />
                     <div className="eff">
                       <div
                         className="btn"
@@ -216,7 +232,12 @@ function Upcoming() {
                           )
                         }
                       >
-                        <img className="play" src={play} alt="play" />
+                        <img
+                          className="play"
+                          src={play}
+                          alt="play"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>
@@ -229,7 +250,11 @@ function Upcoming() {
                 </li>
                 <li>
                   <div>
-                    <img src={upcoming05} alt="명탐정 코난 VS 괴도 키드" />
+                    <img
+                      src={upcoming05}
+                      alt="명탐정 코난 VS 괴도 키드"
+                      loading="lazy"
+                    />
                     <div className="eff">
                       <div
                         className="btn"
@@ -239,7 +264,12 @@ function Upcoming() {
                           )
                         }
                       >
-                        <img className="play" src={play} alt="play" />
+                        <img
+                          className="play"
+                          src={play}
+                          alt="play"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>
@@ -254,7 +284,11 @@ function Upcoming() {
               <ul>
                 <li>
                   <div>
-                    <img src={upcoming06} alt="데드풀과 울버린" />
+                    <img
+                      src={upcoming06}
+                      alt="데드풀과 울버린"
+                      loading="lazy"
+                    />
                     <div className="eff">
                       <div
                         className="btn"
@@ -264,7 +298,12 @@ function Upcoming() {
                           )
                         }
                       >
-                        <img className="play" src={play} alt="play" />
+                        <img
+                          className="play"
+                          src={play}
+                          alt="play"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>
@@ -277,7 +316,7 @@ function Upcoming() {
                 </li>
                 <li>
                   <div>
-                    <img src={upcoming07} alt="슈퍼배드 4" />
+                    <img src={upcoming07} alt="슈퍼배드 4" loading="lazy" />
                     <div className="eff">
                       <div
                         className="btn"
@@ -287,7 +326,12 @@ function Upcoming() {
                           )
                         }
                       >
-                        <img className="play" src={play} alt="play" />
+                        <img
+                          className="play"
+                          src={play}
+                          alt="play"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>
@@ -302,7 +346,11 @@ function Upcoming() {
               <ul>
                 <li>
                   <div>
-                    <img src={upcoming08} alt="에이리언- 로물루스" />
+                    <img
+                      src={upcoming08}
+                      alt="에이리언- 로물루스"
+                      loading="lazy"
+                    />
                     <div className="eff">
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>
@@ -315,7 +363,7 @@ function Upcoming() {
                 </li>
                 <li>
                   <div>
-                    <img src={upcoming09} alt="위키드" />
+                    <img src={upcoming09} alt="위키드" loading="lazy" />
                     <div className="eff">
                       <div
                         className="btn"
@@ -325,7 +373,12 @@ function Upcoming() {
                           )
                         }
                       >
-                        <img className="play" src={play} alt="play" />
+                        <img
+                          className="play"
+                          src={play}
+                          alt="play"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>
@@ -340,7 +393,7 @@ function Upcoming() {
               <ul>
                 <li>
                   <div>
-                    <img src={upcoming10} alt="모아나 2" />
+                    <img src={upcoming10} alt="모아나 2" loading="lazy" />
                     <div className="eff">
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>
@@ -353,7 +406,7 @@ function Upcoming() {
                 </li>
                 <li>
                   <div>
-                    <img src={upcoming11} alt="애니멀 킹덤" />
+                    <img src={upcoming11} alt="애니멀 킹덤" loading="lazy" />
                     <div className="eff">
                       <div className="link">
                         <button onClick={() => handleNavigation("/making")}>

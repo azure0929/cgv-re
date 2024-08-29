@@ -20,36 +20,36 @@ function Theater() {
         <div className="inner">
           <div className="list">
             <div className="list-group">
-              <img src={theater01} alt="theater01" />
-              <img src={theater02} alt="theater02" />
-              <img src={theater03} alt="theater03" />
-              <img src={theater04} alt="theater04" />
-              <img src={theater05} alt="theater05" />
+              <img src={theater01} alt="theater01" loading="lazy" />
+              <img src={theater02} alt="theater02" loading="lazy" />
+              <img src={theater03} alt="theater03" loading="lazy" />
+              <img src={theater04} alt="theater04" loading="lazy" />
+              <img src={theater05} alt="theater05" loading="lazy" />
             </div>
             <div aria-hidden="true" className="list-group">
-              <img src={theater01} alt="theater01" />
-              <img src={theater02} alt="theater02" />
-              <img src={theater03} alt="theater03" />
-              <img src={theater04} alt="theater04" />
-              <img src={theater05} alt="theater05" />
+              <img src={theater01} alt="theater01" loading="lazy" />
+              <img src={theater02} alt="theater02" loading="lazy" />
+              <img src={theater03} alt="theater03" loading="lazy" />
+              <img src={theater04} alt="theater04" loading="lazy" />
+              <img src={theater05} alt="theater05" loading="lazy" />
             </div>
           </div>
           <div className="list list-reverse">
             <div className="list-group">
-              <img src={theater06} alt="theater06" />
-              <img src={theater07} alt="theater07" />
-              <img src={theater08} alt="theater08" />
-              <img src={theater09} alt="theater09" />
-              <img src={theater10} alt="theater10" />
-              <img src={theater11} alt="theater11" />
+              <img src={theater06} alt="theater06" loading="lazy" />
+              <img src={theater07} alt="theater07" loading="lazy" />
+              <img src={theater08} alt="theater08" loading="lazy" />
+              <img src={theater09} alt="theater09" loading="lazy" />
+              <img src={theater10} alt="theater10" loading="lazy" />
+              <img src={theater11} alt="theater11" loading="lazy" />
             </div>
             <div aria-hidden="true" className="list-group">
-              <img src={theater06} alt="theater06" />
-              <img src={theater07} alt="theater07" />
-              <img src={theater08} alt="theater08" />
-              <img src={theater09} alt="theater09" />
-              <img src={theater10} alt="theater10" />
-              <img src={theater11} alt="theater11" />
+              <img src={theater06} alt="theater06" loading="lazy" />
+              <img src={theater07} alt="theater07" loading="lazy" />
+              <img src={theater08} alt="theater08" loading="lazy" />
+              <img src={theater09} alt="theater09" loading="lazy" />
+              <img src={theater10} alt="theater10" loading="lazy" />
+              <img src={theater11} alt="theater11" loading="lazy" />
             </div>
           </div>
         </div>

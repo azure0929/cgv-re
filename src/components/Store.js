@@ -72,7 +72,7 @@ function Store() {
                 </div>
                 <ul className="list">
                   <li>
-                    <img src={pakage01} alt="pakage01" />
+                    <img src={pakage01} alt="pakage01" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -84,7 +84,7 @@ function Store() {
                     </div>
                   </li>
                   <li>
-                    <img src={pakage02} alt="pakage02" />
+                    <img src={pakage02} alt="pakage02" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -98,7 +98,7 @@ function Store() {
                 </ul>
                 <ul className="list">
                   <li>
-                    <img src={pakage03} alt="pakage03" />
+                    <img src={pakage03} alt="pakage03" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -110,7 +110,7 @@ function Store() {
                     </div>
                   </li>
                   <li>
-                    <img src={pakage04} alt="pakage04" />
+                    <img src={pakage04} alt="pakage04" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -132,7 +132,7 @@ function Store() {
                 </div>
                 <ul className="list">
                   <li>
-                    <img src={gift01} alt="gift01" />
+                    <img src={gift01} alt="gift01" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -144,7 +144,7 @@ function Store() {
                     </div>
                   </li>
                   <li>
-                    <img src={gift02} alt="gift02" />
+                    <img src={gift02} alt="gift02" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -158,7 +158,7 @@ function Store() {
                 </ul>
                 <ul className="list">
                   <li>
-                    <img src={gift03} alt="gift03" />
+                    <img src={gift03} alt="gift03" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -170,7 +170,7 @@ function Store() {
                     </div>
                   </li>
                   <li>
-                    <img src={gift04} alt="gift04" />
+                    <img src={gift04} alt="gift04" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -192,7 +192,7 @@ function Store() {
                 </div>
                 <ul className="list">
                   <li>
-                    <img src={baverage01} alt="baverage01" />
+                    <img src={baverage01} alt="baverage01" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -204,7 +204,7 @@ function Store() {
                     </div>
                   </li>
                   <li>
-                    <img src={baverage02} alt="baverage02" />
+                    <img src={baverage02} alt="baverage02" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -218,7 +218,7 @@ function Store() {
                 </ul>
                 <ul className="list">
                   <li>
-                    <img src={baverage03} alt="baverage03" />
+                    <img src={baverage03} alt="baverage03" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
@@ -230,7 +230,7 @@ function Store() {
                     </div>
                   </li>
                   <li>
-                    <img src={baverage04} alt="baverage04" />
+                    <img src={baverage04} alt="baverage04" loading="lazy" />
                     <div className="info">
                       <button onClick={() => handleNavigation("/making")}>
                         <img src={plus} alt="link" />
