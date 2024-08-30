@@ -46,8 +46,18 @@ Environment
 
   <details>
     <summary>최대 텍스트 또는 이미지가 표시되는 시간 : 2.1초 → 0.8초</summary>
-    <img src="https://github.com/user-attachments/assets/397986c7-9759-4153-980c-b8d6e8abdce7" alt="">
-    <img src="https://github.com/user-attachments/assets/5ee614ce-81f2-4847-9cf7-a4a9c50c1c8c" alt="">
+    <img src="https://github.com/user-attachments/assets/397986c7-9759-4153-980c-b8d6e8abdce7" alt="before">
+    <img src="https://github.com/user-attachments/assets/5ee614ce-81f2-4847-9cf7-a4a9c50c1c8c" alt="after">
+  </details>
+
+**2️⃣ useMemo를 활용하여 SwiperSlide를 동적으로 생성(코드의 반복성 줄임) & loading="lazy"로 초기 로딩 성능 개선**
+
+- 성능 : 71 -> 73
+
+  <details>
+    <summary>페이지 콘텐츠가 표시되는 속도 : 2.2초 → 1.9초</summary>
+    <img src="https://github.com/user-attachments/assets/5ee614ce-81f2-4847-9cf7-a4a9c50c1c8c" alt="before">
+    <img src="https://github.com/user-attachments/assets/b1862918-1e9f-48a7-93ed-a719e8c3d2e9" alt="after">
   </details>
 
 <br><br>
