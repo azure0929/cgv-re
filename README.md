@@ -10,6 +10,8 @@
 
 #### - 작업 기간: 2024.07
 
+#### - 리팩토링: 2024.09
+
 <br>
 
 ### 기술 스택
@@ -142,11 +144,11 @@ const handleCloseModal = useCallback(() => {
   className="btn"
   onClick={() =>
     openModal(
-      "https://h.vod.cgv.co.kr/vodCGVa/87864/87864_226866_1200_128_960_540.mp4"
+      "https://h.vod.cgv.co.kr/vodCGVa/88267/88267_226464_1200_128_960_540.mp4"
     )
   }
 >
-  <img className="play" src={play} alt="play" />
+  <img className="play" src={play} alt="play" loading="lazy" />
 </div>
 ```
 
