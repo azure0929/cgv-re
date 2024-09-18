@@ -2,8 +2,8 @@ import { useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import search2 from "@/assets/search2.png";
 import attention from "@/assets/attention.png";
-import "@/css/Making.css";
-import "@/App.css";
+import "@/scss/Making.scss";
+import "@/App.scss";
 
 function Making() {
   const navigate = useNavigate();

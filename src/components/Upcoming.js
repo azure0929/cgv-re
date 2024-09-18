@@ -17,8 +17,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import play from "@/assets/play.png";
-import "@/App.css";
-import "@/css/Upcoming.css";
+import "@/App.scss";
+import "@/scss/Upcoming.scss";
 
 function Upcoming() {
   // Trailer Modal

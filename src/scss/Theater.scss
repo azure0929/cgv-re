@@ -1,0 +1,46 @@
+.theater {
+  margin-top: 126px;
+  overflow: hidden;
+  .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: auto;
+    .list {
+      display: flex;
+      user-select: none;
+      gap: 16px;
+      .list-group {
+        display: flex;
+        justify-content: space-around;
+        gap: 16px;
+        animation: scroll-x var(--duration) linear infinite;
+      }
+    }
+    .list-reverse {
+      .list-group {
+        animation-direction: reverse;
+        animation-delay: -3s;
+      }
+    }
+  }
+  img {
+    width: 382px;
+    height: 212px;
+    border-radius: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .list {
+    animation-play-state: paused;
+  }
+}
+@keyframes scroll-x {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}

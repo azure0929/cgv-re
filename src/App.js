@@ -3,7 +3,7 @@ import Main from "@/routes/Main.js";
 import Making from "@/routes/Making.js";
 import Footer from "@/common/Footer.js";
 import ScrollToTop from "./components/ScrollToTop";
-import "@/App.css";
+import "@/App.scss";
 
 function App() {
   return (

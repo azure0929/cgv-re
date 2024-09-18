@@ -1,8 +1,8 @@
 import { useState } from "react";
 import logo from "@/assets/logo.png";
 import qr from "@/assets/qr.png";
-import "@/css/Footer.css";
-import "@/App.css";
+import "@/scss/Footer.scss";
+import "@/App.scss";
 
 function Footer() {
   const [selectedUrl, setSelectedUrl] = useState("");

@@ -10,8 +10,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { chartData } from "@/data/ChartData.js";
 import play from "@/assets/play.png";
-import "@/App.css";
-import "@/css/MovieChart.css";
+import "@/App.scss";
+import "@/scss/MovieChart.scss";
 
 import "swiper/css";
 import "swiper/css/navigation";

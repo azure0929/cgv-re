@@ -21,7 +21,7 @@ Development
 <p>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white">
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
+<img src="https://img.shields.io/badge/SASS-CC6699?style=flat&logo=SASS&logoColor=white" />
 <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat&logo=Javascript&logoColor=white" />
 </p>
 
@@ -66,7 +66,7 @@ Environment
 
 ### 전체 페이지
 
-<img src="https://github.com/user-attachments/assets/589efdcf-757b-4eeb-bb6e-4ef05f30bf40" />
+<img src="https://github.com/user-attachments/assets/9a31494c-55f2-448a-b39b-6d3d928e2b81" />
 
 <br><br>
 
@@ -202,36 +202,38 @@ const handleCloseModal = useCallback(() => {
 </section>
 ```
 
-```css
+```scss
 .theater {
   margin-top: 126px;
   overflow: hidden;
-}
-.theater .inner {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin: auto;
-}
-.theater img {
-  width: 382px;
-  height: 212px;
-  border-radius: 12px;
-}
-.theater .inner .list {
-  display: flex;
-  user-select: none;
-  gap: 16px;
-}
-.theater .inner .list .list-group {
-  display: flex;
-  justify-content: space-around;
-  gap: 16px;
-  animation: scroll-x var(--duration) linear infinite;
-}
-.theater .inner .list-reverse .list-group {
-  animation-direction: reverse;
-  animation-delay: -3s;
+  .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: auto;
+    .list {
+      display: flex;
+      user-select: none;
+      gap: 16px;
+      .list-group {
+        display: flex;
+        justify-content: space-around;
+        gap: 16px;
+        animation: scroll-x var(--duration) linear infinite;
+      }
+    }
+    .list-reverse {
+      .list-group {
+        animation-direction: reverse;
+        animation-delay: -3s;
+      }
+    }
+  }
+  img {
+    width: 382px;
+    height: 212px;
+    border-radius: 12px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -275,34 +277,41 @@ const handleCloseModal = useCallback(() => {
 
 - Flex를 활용하여 동적 리스트 항목 크기 조절 및 애니메이션 효과 구현
 
-```css
-.event .inner .contents .lists ul li {
-  border-radius: 12px;
-  position: relative;
-  width: calc(1200px / 7);
-  height: 530px;
-  flex: 1;
-  filter: grayscale(1);
-  transition: 0.35s;
-  transition: 0.3s;
-  cursor: pointer;
-  overflow: hidden;
-}
-.event .inner .contents .lists ul li:hover {
-  flex: 5;
-  filter: grayscale(0);
-}
-.event .inner .contents .lists ul li:hover div {
-  opacity: 1;
-  transition: 0.3s;
-}
-.event .inner .contents .lists ul li div {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+```scss
+.event {
+  .inner {
+    .contents {
+      .lists {
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          gap: 6px;
+          overflow: hidden;
+          li {
+            border-radius: 12px;
+            position: relative;
+            width: calc(1200px / 7);
+            height: 530px;
+            flex: 1;
+            filter: grayscale(1);
+            transition: 0.35s;
+            transition: 0.3s;
+            cursor: pointer;
+            overflow: hidden;
+            &:hover {
+              flex: 5;
+              filter: grayscale(0);
+              div {
+                opacity: 1;
+                transition: 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 ```

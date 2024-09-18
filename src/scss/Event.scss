@@ -1,0 +1,259 @@
+.event {
+  margin-top: 90px;
+  .inner {
+    width: 1200px;
+    margin: 0 auto;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .left {
+        h2 {
+          font-size: 30px;
+          font-weight: 500;
+        }
+      }
+      .right {
+        border: 1px solid #e2e2e2;
+        font-size: 14px;
+        border-radius: 30px;
+        width: 120px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        cursor: pointer;
+      }
+    }
+    .contents {
+      margin-top: 44px;
+      .tabmenu {
+        ul {
+          display: flex;
+          gap: 16px;
+          li {
+            border-radius: 30px;
+            width: 150px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover {
+              color: #f1f1f1;
+              background: linear-gradient(90deg, #ff7356, #fb4357);
+            }
+            &.active {
+              color: #f1f1f1;
+              background: linear-gradient(90deg, #ff7356, #fb4357);
+            }
+          }
+        }
+      }
+      .lists {
+        margin-top: 26px;
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          gap: 6px;
+          overflow: hidden;
+          li {
+            border-radius: 12px;
+            position: relative;
+            width: calc(1200px / 7);
+            height: 530px;
+            flex: 1;
+            filter: grayscale(1);
+            transition: 0.35s;
+            transition: 0.3s;
+            cursor: pointer;
+            overflow: hidden;
+            &:hover {
+              flex: 5;
+              filter: grayscale(0);
+              div {
+                opacity: 1;
+                transition: 0.3s;
+              }
+            }
+            div {
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.6);
+            }
+            &.background-event01 {
+              background: url("../assets/event01.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event01 {
+              background: url("../assets/event01.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event01 {
+              background: url("../assets/event01.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event02 {
+              background: url("../assets/event02.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event03 {
+              background: url("../assets/event03.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event04 {
+              background: url("../assets/event04.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event05 {
+              background: url("../assets/event05.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event06 {
+              background: url("../assets/event06.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event07 {
+              background: url("../assets/event07.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event08 {
+              background: url("../assets/event08.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event09 {
+              background: url("../assets/event09.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event10 {
+              background: url("../assets/event10.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event11 {
+              background: url("../assets/event11.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event12 {
+              background: url("../assets/event12.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event13 {
+              background: url("../assets/event13.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event14 {
+              background: url("../assets/event14.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event15 {
+              background: url("../assets/event15.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event16 {
+              background: url("../assets/event16.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event17 {
+              background: url("../assets/event17.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event18 {
+              background: url("../assets/event18.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event19 {
+              background: url("../assets/event19.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event20 {
+              background: url("../assets/event20.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event21 {
+              background: url("../assets/event21.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event22 {
+              background: url("../assets/event22.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event23 {
+              background: url("../assets/event23.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event24 {
+              background: url("../assets/event24.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event25 {
+              background: url("../assets/event25.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event26 {
+              background: url("../assets/event26.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event27 {
+              background: url("../assets/event27.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event28 {
+              background: url("../assets/event28.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event29 {
+              background: url("../assets/event29.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event30 {
+              background: url("../assets/event30.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event31 {
+              background: url("../assets/event31.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event32 {
+              background: url("../assets/event32.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event33 {
+              background: url("../assets/event33.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event34 {
+              background: url("../assets/event34.webp") no-repeat center center;
+              background-size: cover;
+            }
+            &.background-event35 {
+              background: url("../assets/event35.webp") no-repeat center center;
+              background-size: cover;
+            }
+          }
+          button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 30px;
+            border: 1px solid #f1f1f1;
+            width: 130px;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f1f1f1;
+          }
+        }
+      }
+    }
+  }
+}

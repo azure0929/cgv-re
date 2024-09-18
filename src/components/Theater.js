@@ -9,8 +9,8 @@ import theater08 from "@/assets/theater08.webp";
 import theater09 from "@/assets/theater09.webp";
 import theater10 from "@/assets/theater10.webp";
 import theater11 from "@/assets/theater11.webp";
-import "@/App.css";
-import "@/css/Theater.css";
+import "@/App.scss";
+import "@/scss/Theater.scss";
 
 function Theater() {
   return (

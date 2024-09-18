@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "@/App.css";
-import "@/css/Event.css";
+import "@/App.scss";
+import "@/scss/Event.scss";
 
 function Event() {
   const [activeTab, setActiveTab] = useState(0);

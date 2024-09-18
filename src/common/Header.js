@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import search from "@/assets/search.png";
-import "@/css/Header.css";
-import "@/App.css";
+import "@/scss/Header.scss";
+import "@/App.scss";
 
 function Header() {
   const navigate = useNavigate();

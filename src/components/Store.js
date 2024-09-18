@@ -16,8 +16,8 @@ import baverage04 from "@/assets/baverage04.webp";
 import plus from "@/assets/plus.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import "@/App.css";
-import "@/css/Store.css";
+import "@/App.scss";
+import "@/scss/Store.scss";
 import { useEffect } from "react";
 
 function Store() {

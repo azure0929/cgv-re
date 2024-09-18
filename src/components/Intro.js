@@ -6,8 +6,8 @@ import play from "@/assets/play.png";
 import { movieData } from "@/data/MovieData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import "@/App.css";
-import "@/css/Intro.css";
+import "@/App.scss";
+import "@/scss/Intro.scss";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -54,10 +54,6 @@ function Intro() {
               </div>
               <div className="right">
                 <h2>{movie.title}</h2>
-                <p>
-                  <span>{movie.description.split(" ")[0]}</span>{" "}
-                  <span>{movie.description.split(" ")[1]}</span>
-                </p>
               </div>
             </div>
             <img src={movie.head} alt={movie.title} loading="lazy" />
