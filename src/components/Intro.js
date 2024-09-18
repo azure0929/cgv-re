@@ -31,39 +31,41 @@ function Intro() {
   // Navigate
   const navigate = useNavigate();
 
-  const handleNavigation = (path) => {
-    navigate(path);
-  };
-
   const swiperSlides = useMemo(
     () =>
-      movieData.map((movie) => (
-        <SwiperSlide key={movie.title}>
-          <div className="movie">
-            <div className="content">
-              <div className="left">
-                <div className="poster">
-                  <img src={movie.poster} alt="poster" loading="lazy" />
+      movieData.map((movie) => {
+        const handleNavigation = (path) => {
+          navigate(path);
+        };
+
+        return (
+          <SwiperSlide key={movie.title}>
+            <div className="movie">
+              <div className="content">
+                <div className="left">
+                  <div className="poster">
+                    <img src={movie.poster} alt="poster" loading="lazy" />
+                  </div>
+                  <div className="info">
+                    <span>{movie.date}</span>
+                    <button onClick={() => handleNavigation("/making")}>
+                      예매
+                    </button>
+                  </div>
                 </div>
-                <div className="info">
-                  <span>{movie.date}</span>
-                  <button onClick={() => handleNavigation("/making")}>
-                    예매
-                  </button>
+                <div className="right">
+                  <h2>{movie.title}</h2>
                 </div>
               </div>
-              <div className="right">
-                <h2>{movie.title}</h2>
-              </div>
+              <img src={movie.head} alt={movie.title} loading="lazy" />
             </div>
-            <img src={movie.head} alt={movie.title} loading="lazy" />
-          </div>
-          <div className="btn" onClick={() => openModal(movie.videoUrl)}>
-            <img className="play" src={play} alt="play" loading="lazy" />
-          </div>
-        </SwiperSlide>
-      )),
-    [openModal, handleNavigation]
+            <div className="btn" onClick={() => openModal(movie.videoUrl)}>
+              <img className="play" src={play} alt="play" loading="lazy" />
+            </div>
+          </SwiperSlide>
+        );
+      }),
+    [navigate, openModal]
   );
 
   return (
