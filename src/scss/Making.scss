@@ -1,21 +1,24 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 header.light {
   .inner {
     width: 1200px;
     height: 136px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     .content {
       height: inherit;
       padding: 16px 0;
       display: flex;
-      justify-content: space-between;
       flex-direction: column;
+      justify-content: space-between;
     }
     .top {
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       gap: 82px;
       .logo {
         display: flex;
@@ -27,7 +30,7 @@ header.light {
           &:last-child {
             display: flex;
             flex-direction: column;
-            justify-content: end;
+            justify-content: flex-end;
             color: var(--text);
           }
         }
@@ -38,7 +41,7 @@ header.light {
         a {
           display: flex;
           flex-direction: column;
-          justify-content: end;
+          justify-content: flex-end;
           font-size: 14px;
           color: var(--text);
         }
@@ -46,7 +49,7 @@ header.light {
     }
     .bottom {
       ul {
-        display: flex;
+        @include flex-center;
         align-items: center;
         li {
           width: 80px;
@@ -80,21 +83,16 @@ header.light {
   }
 }
 
-/* section : content */
 section.preparing {
   .inner {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 484px;
     .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
+      flex-direction: column;
       text-align: center;
       gap: 18px;
-      flex-direction: column;
       div {
         &:first-child {
           width: 48px;

@@ -1,4 +1,9 @@
-/* section : intro */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .movie {
   position: relative;
   .content {
@@ -19,24 +24,20 @@
         overflow: hidden;
       }
       .info {
-        display: flex;
+        @include flex-center;
         justify-content: space-between;
         height: 46px;
         span {
           display: block;
           color: #f1f1f1;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flex-center;
           width: 128px;
         }
         button {
           border-radius: 30px;
           width: 190px;
           height: 46px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flex-center;
           color: #f1f1f1;
           background: linear-gradient(90deg, #ff7356, #fb4357);
         }

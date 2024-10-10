@@ -1,3 +1,9 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .event {
   margin-top: 90px;
   .inner {
@@ -19,9 +25,7 @@
         border-radius: 30px;
         width: 120px;
         height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center();
         gap: 16px;
         cursor: pointer;
       }
@@ -36,9 +40,7 @@
             border-radius: 30px;
             width: 150px;
             height: 36px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center();
             transition: 0.3s;
             cursor: pointer;
             &:hover {
@@ -247,9 +249,7 @@
             border: 1px solid #f1f1f1;
             width: 130px;
             height: 38px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center();
             color: #f1f1f1;
           }
         }

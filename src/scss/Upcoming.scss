@@ -1,3 +1,9 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .upcoming {
   margin-top: 50px;
   .inner {
@@ -24,9 +30,7 @@
         border-radius: 30px;
         width: 120px;
         height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center();
         gap: 16px;
         cursor: pointer;
       }
@@ -71,9 +75,7 @@
             button {
               border: 1px solid #f1f1f1;
               border-radius: 30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @include flex-center();
               width: 120px;
               height: 38px;
               color: #f1f1f1;
@@ -146,9 +148,7 @@
               border-radius: 30px;
               width: 170px;
               height: 48px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @include flex-center();
               color: #f1f1f1;
               &:first-child {
                 background: linear-gradient(90deg, #ff7356, #fb4357);
@@ -213,9 +213,7 @@
                   button {
                     border: 1px solid #f1f1f1;
                     border-radius: 30px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flex-center();
                     width: 100px;
                     height: 32px;
                     font-size: 14px;
