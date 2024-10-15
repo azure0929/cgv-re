@@ -295,7 +295,6 @@ const handleCloseModal = useCallback(() => {
             height: 530px;
             flex: 1;
             filter: grayscale(1);
-            transition: 0.35s;
             transition: 0.3s;
             cursor: pointer;
             overflow: hidden;
