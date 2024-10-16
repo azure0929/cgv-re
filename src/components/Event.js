@@ -15,24 +15,8 @@ function Event() {
   };
   // 각 탭에 따른 리스트의 배경 이미지 클래스명 배열
   const tabBackgrounds = [
-    [
-      "event01",
-      "event02",
-      "event03",
-      "event04",
-      "event05",
-      "event06",
-      "event07",
-    ],
-    [
-      "event08",
-      "event09",
-      "event10",
-      "event11",
-      "event12",
-      "event13",
-      "event14",
-    ],
+    ["event1", "event2", "event3", "event4", "event5", "event6", "event7"],
+    ["event8", "event9", "event10", "event11", "event12", "event13", "event14"],
     [
       "event15",
       "event16",
