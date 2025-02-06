@@ -19,23 +19,23 @@
 Development
 
 <p>
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white">
-<img src="https://img.shields.io/badge/SASS-CC6699?style=flat&logo=SASS&logoColor=white" />
-<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat&logo=Javascript&logoColor=white" />
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" alt="react" />
+<img src="https://img.shields.io/badge/SASS-CC6699?style=flat&logo=SASS&logoColor=white" alt="sass" />
+<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat&logo=Javascript&logoColor=white" alt="javascript" />
 </p>
 
 Config
 
 <p>
-<img src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" alt="npm" />
 </p>
 
 Environment
 
 <p>
-<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=Visual Studio Code&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat&logo=Visual Studio Code&logoColor=white" alt="vsCode" />
+<img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white" alt="git" />
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" alt="github" />
 </p>
 <br><br>
 
@@ -47,8 +47,8 @@ Environment
 
   <details>
     <summary>최대 텍스트 또는 이미지가 표시되는 시간 : 2.1초 → 0.8초</summary>
-    <img src="https://github.com/user-attachments/assets/397986c7-9759-4153-980c-b8d6e8abdce7" alt="before">
-    <img src="https://github.com/user-attachments/assets/5ee614ce-81f2-4847-9cf7-a4a9c50c1c8c" alt="after">
+    <img src="https://github.com/user-attachments/assets/397986c7-9759-4153-980c-b8d6e8abdce7" alt="before" />
+    <img src="https://github.com/user-attachments/assets/5ee614ce-81f2-4847-9cf7-a4a9c50c1c8c" alt="after" />
   </details>
 
 **2️⃣ useMemo를 활용하여 SwiperSlide를 동적으로 생성(코드의 반복성 줄임) & loading="lazy"로 초기 로딩 성능 개선**
@@ -57,15 +57,15 @@ Environment
 
   <details>
     <summary>페이지 콘텐츠가 표시되는 속도 : 2.2초 → 1.9초</summary>
-    <img src="https://github.com/user-attachments/assets/5ee614ce-81f2-4847-9cf7-a4a9c50c1c8c" alt="before">
-    <img src="https://github.com/user-attachments/assets/b1862918-1e9f-48a7-93ed-a719e8c3d2e9" alt="after">
+    <img src="https://github.com/user-attachments/assets/5ee614ce-81f2-4847-9cf7-a4a9c50c1c8c" alt="before" />
+    <img src="https://github.com/user-attachments/assets/b1862918-1e9f-48a7-93ed-a719e8c3d2e9" alt="after" />
   </details>
 
 <br><br>
 
 ### 전체 페이지
 
-<img src="https://github.com/user-attachments/assets/9a31494c-55f2-448a-b39b-6d3d928e2b81" />
+<img src="https://github.com/user-attachments/assets/9a31494c-55f2-448a-b39b-6d3d928e2b81" alt="전체 페이지" />
 
 <br><br>
 
