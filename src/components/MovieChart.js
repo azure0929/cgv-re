@@ -45,17 +45,20 @@ function MovieChart() {
   // Navigate
   const navigate = useNavigate();
 
-  const handleNavigation = (path) => {
-    navigate(path);
-  };
+  const handleNavigation = useCallback(
+    (path) => {
+      navigate(path);
+    },
+    [navigate]
+  );
 
   // AOS
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const swiperSlides = useMemo(() =>
-    chartData.map((item) => (
+  const swiperSlides = useMemo(() => {
+    return chartData.map((item) => (
       <SwiperSlide key={item.id}>
         <div data-aos="fade-up" data-aos-duration="1000">
           <img src={item.image} alt={item.title} loading="lazy" />
@@ -77,8 +80,8 @@ function MovieChart() {
           </div>
         </div>
       </SwiperSlide>
-    ))
-  );
+    ));
+  }, [openModal, handleNavigation]);
 
   return (
     <div>
