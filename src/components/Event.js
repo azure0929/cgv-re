@@ -9,11 +9,12 @@ import "@/scss/Event.scss";
 
 function Event() {
   const [activeTab, setActiveTab] = useState(0);
+  const [loadedImages, setLoadedImages] = useState(new Set());
 
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
-  // 각 탭에 따른 리스트의 배경 이미지 클래스명 배열
+
   const tabBackgrounds = [
     ["event1", "event2", "event3", "event4", "event5", "event6", "event7"],
     ["event8", "event9", "event10", "event11", "event12", "event13", "event14"],
@@ -46,17 +47,25 @@ function Event() {
     ],
   ];
 
-  // Navigate
+  // 이미지 미리 로드
+  useEffect(() => {
+    const allImages = new Set();
+    tabBackgrounds.flat().forEach((img) => {
+      const image = new Image();
+      image.src = require(`@/assets/${img}.webp`);
+      image.onload = () => {
+        allImages.add(img);
+        setLoadedImages(new Set(allImages));
+      };
+    });
+  }, []);
+
   const navigate = useNavigate();
+  const handleNavigation = (path) => navigate(path);
 
-  const handleNavigation = (path) => {
-    navigate(path);
-  };
-
-  // AOS
   useEffect(() => {
     AOS.init();
-  });
+  }, []);
 
   return (
     <div>
@@ -73,7 +82,7 @@ function Event() {
               data-aos-duration="900"
             >
               전체보기
-              <div href="#none" className="icon">
+              <div className="icon">
                 <FontAwesomeIcon icon={faAngleRight} />
               </div>
             </div>
@@ -85,42 +94,32 @@ function Event() {
               data-aos-duration="1100"
             >
               <ul>
-                <li
-                  className={activeTab === 0 ? "active" : ""}
-                  onClick={() => handleTabClick(0)}
-                >
-                  SPECIAL
-                </li>
-                <li
-                  className={activeTab === 1 ? "active" : ""}
-                  onClick={() => handleTabClick(1)}
-                >
-                  영화/예매
-                </li>
-                <li
-                  className={activeTab === 2 ? "active" : ""}
-                  onClick={() => handleTabClick(2)}
-                >
-                  멤버십/CLUB
-                </li>
-                <li
-                  className={activeTab === 3 ? "active" : ""}
-                  onClick={() => handleTabClick(3)}
-                >
-                  CGV 극장별
-                </li>
-                <li
-                  className={activeTab === 4 ? "active" : ""}
-                  onClick={() => handleTabClick(4)}
-                >
-                  제휴/할인
-                </li>
+                {[
+                  "SPECIAL",
+                  "영화/예매",
+                  "멤버십/CLUB",
+                  "CGV 극장별",
+                  "제휴/할인",
+                ].map((tab, index) => (
+                  <li
+                    key={index}
+                    className={activeTab === index ? "active" : ""}
+                    onClick={() => handleTabClick(index)}
+                  >
+                    {tab}
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="lists" data-aos="fade-up" data-aos-duration="1500">
               <ul>
                 {tabBackgrounds[activeTab].map((bg, index) => (
-                  <li key={index} className={`background-${bg}`}>
+                  <li
+                    key={index}
+                    className={`background-${bg} ${
+                      loadedImages.has(bg) ? "loaded" : "loading"
+                    }`}
+                  >
                     <div>
                       <button onClick={() => handleNavigation("/making")}>
                         상세보기

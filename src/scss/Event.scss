@@ -11,19 +11,21 @@
 
 .event {
   margin-top: 90px;
+
   .inner {
     width: 1200px;
     margin: 0 auto;
+
     .title {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .left {
-        h2 {
-          font-size: 30px;
-          font-weight: 500;
-        }
+
+      .left h2 {
+        font-size: 30px;
+        font-weight: 500;
       }
+
       .right {
         border: 1px solid #e2e2e2;
         font-size: 14px;
@@ -35,12 +37,15 @@
         cursor: pointer;
       }
     }
+
     .contents {
       margin-top: 44px;
+
       .tabmenu {
         ul {
           display: flex;
           gap: 16px;
+
           li {
             border-radius: 30px;
             width: 150px;
@@ -49,11 +54,7 @@
             transition: 0.3s;
             cursor: pointer;
 
-            &:hover {
-              color: #f1f1f1;
-              background: linear-gradient(90deg, #ff7356, #fb4357);
-            }
-
+            &:hover,
             &.active {
               color: #f1f1f1;
               background: linear-gradient(90deg, #ff7356, #fb4357);
@@ -61,15 +62,15 @@
           }
         }
       }
+
       .lists {
         margin-top: 26px;
+
         ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
           display: flex;
           gap: 6px;
           overflow: hidden;
+
           li {
             border-radius: 12px;
             position: relative;
@@ -80,14 +81,25 @@
             transition: 0.3s;
             cursor: pointer;
             overflow: hidden;
+
+            &.loading {
+              background: #e2e2e2; // 로딩 중일 때 회색 배경
+            }
+
+            &.loaded {
+              filter: grayscale(1);
+            }
+
             &:hover {
               flex: 5;
               filter: grayscale(0);
+
               div {
                 opacity: 1;
                 transition: 0.3s;
               }
             }
+
             div {
               opacity: 0;
               position: absolute;
@@ -97,12 +109,14 @@
               height: 100%;
               background-color: rgba(0, 0, 0, 0.6);
             }
+
             @for $i from 1 through 35 {
               &.background-event#{$i} {
                 @include background-event($i);
               }
             }
           }
+
           button {
             position: absolute;
             top: 50%;
