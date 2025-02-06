@@ -49,17 +49,9 @@
       flex-direction: column;
       justify-content: end;
       h2 {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 700;
         color: #f1f1f1;
-      }
-      p {
-        margin: 0;
-        font-size: 36px;
-        color: #f1f1f1;
-        span {
-          color: var(--primary);
-        }
       }
     }
   }

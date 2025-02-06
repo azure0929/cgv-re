@@ -11,43 +11,43 @@ import movieHead05 from "@/assets/movieHead05.webp";
 
 export const movieData = [
   {
-    title: "탈출-프로젝트 사일런스",
-    date: "2024.07.12",
+    title: "말할 수 없는 비밀",
+    date: "2025.01.27",
     poster: introPoster01,
     head: movieHead01,
     videoUrl:
-      "https://h.vod.cgv.co.kr/vodCGVa/88384/88384_226770_1200_128_960_540.mp4",
+      "https://h.vod.cgv.co.kr/vodCGVa/89375/89375_233404_1200_128_960_540.mp4",
   },
   {
-    title: "탈주",
-    date: "2024.07.03",
+    title: "캡틴 아메리카: 브레이브 뉴 월드",
+    date: "2025.02.12",
     poster: introPoster02,
     head: movieHead02,
     videoUrl:
-      "https://h.vod.cgv.co.kr/vodCGVa/88267/88267_226221_1200_128_960_540.mp4",
+      "https://h.vod.cgv.co.kr/vodCGVa/89434/89434_233863_1200_128_960_540.mp4",
   },
   {
-    title: "인사이드 아웃2",
-    date: "2024.06.12",
+    title: "히트맨2",
+    date: "2025.01.22",
     poster: introPoster03,
     head: movieHead03,
     videoUrl:
-      "https://h.vod.cgv.co.kr/vodCGVa/87864/87864_226866_1200_128_960_540.mp4",
+      "https://h.vod.cgv.co.kr/vodCGVa/89367/89367_233338_1200_128_960_540.mp4",
   },
   {
-    title: "콰이어트 플레이스-첫째 날",
-    date: "2024.06.26",
+    title: "검은 수녀들",
+    date: "2025.01.24",
     poster: introPoster04,
     head: movieHead04,
     videoUrl:
-      "https://h.vod.cgv.co.kr/vodCGVa/88335/88335_226292_1200_128_960_540.mp4",
+      "https://h.vod.cgv.co.kr/vodCGVa/89398/89398_233697_1200_128_960_540.mp4",
   },
   {
-    title: "핸섬가이즈",
-    date: "2024.06.26",
+    title: "브로큰",
+    date: "2025.02.05",
     poster: introPoster05,
     head: movieHead05,
     videoUrl:
-      "https://h.vod.cgv.co.kr/vodCGVa/88227/88227_226482_1200_128_960_540.mp4",
+      "https://h.vod.cgv.co.kr/vodCGVa/89389/89389_233556_1200_128_960_540.mp4",
   },
 ];
